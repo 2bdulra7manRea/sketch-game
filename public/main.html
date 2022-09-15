@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/main.css" type="text/css" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="/socket.io/socket.io.js"></script>
+    <title>Sketch Game</title>
+</head>
+<body>
+    <div class="container">
+
+        <div class="main-bar">
+            <h1>Anyway just draw</h1>
+        </div>
+
+        <div class="header-bar">
+            <div class="actions-game">
+                <button class="start-game" onclick="startRound()" >Start Game</button>
+                <div class="time">
+                    <span id="time-clock">00:00</span>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="action-bar">
+            <button onclick="startDrawCircle(this)"  class="btn" >Draw Cirlce</button>
+            
+            <button onclick="startDrawLine(this)" class="btn" >Draw Line</button>
+            
+            <button onclick="startDrawRect(this)"  class="btn">Draw Rect</button>
+            <button onclick="clean()"  class="btn">Clean Up</button>
+            <button onclick="printImage()"  class="btn">Download</button>
+            
+            <div style="text-align:center">
+                <p id="rangeText" ></p>
+                <a  href="" download="dowo.jpeg" ></a>
+            <input type="range" onchange="inputOnChange()" min="4" max="40" placeholder="Line Width" id="lineWidth">
+            <input type="color" onchange="changeColor()"  id="inputColor" >
+            </div>
+            
+        </div> -->
+
+<div class="content">
+<section class="box-1-side-bar">
+    <div class="players-box">
+   
+    </div>
+</section>
+
+
+
+<section class="box-2-screen">
+<span class="circle"></span>
+<canvas id = "mycanvas"  width="730px" height="540px" onmouseup="mouseUp()"  onmousedown="mouseDown()" 
+></canvas>
+
+<!-- ondblclick="stopDrawLine()" onclick="handleMouse(event)" -->
+
+</section>
+
+
+<section class="box-3">
+    <div class="chat">
+    </div>
+
+    <div class="chat-action">
+        <input id="msg-input" name="msg-input" placeholder="Type your guess here" >
+        <button onclick="sendMessageBtn()" >Send</button>
+    </div>
+</section>
+
+</div>
+
+
+
+<div class="view-turn">
+<div class="choose-background">
+    <div class="view-btn">
+    </div>
+</div>
+</div>
+
+<div class="show-answer" >
+    <p id="text-answer">Heart</p>
+</div>
+</div>
+<script type="text/javascript" src="/socketConnect.js"></script>
+<script type="text/javascript" src="/helpers.js"></script>
+<script type="text/javascript" src="/players.js" ></script>
+<script type="text/javascript" src="/Drawings.js" ></script>
+<script type="text/javascript" src="/messages.js" ></script>
+<script type="text/javascript" src="/main.js"></script>
+<script type="text/javascript" src="/Time.js"></script>
+<script type="text/javascript" src="/Answer.js" ></script>
+<script type="text/javascript" src="/SelectionButtons.js" ></script>
+<script type="text/javascript" src="/selectionDrawings.js" ></script>
+<script type="text/javascript" src="/Turn.js" ></script>
+<script type="text/javascript" src="/round.js"></script>
+</body>
+</html>
